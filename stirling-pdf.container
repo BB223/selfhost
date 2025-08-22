@@ -6,7 +6,9 @@ Wants=traefik.container
 [Container]
 Image=docker.stirlingpdf.com/stirlingtools/stirling-pdf:latest
 AutoUpdate=registry
-Environment=DISABLE_ADDITIONAL_FEATURES=false LANGS=en_US
+Environment=LANGS=en_US
+Environment=DISABLE_ADDITIONAL_FEATURES=false
+Environment=SYSTEM_ENABLEANALYTICS=false
 Mount=type=volume,source=stirling-pdf.volume,volume-subpath=trainingData,target=/usr/share/tessdata
 Mount=type=volume,source=stirling-pdf.volume,volume-subpath=extraConfigs,target=/configs
 Mount=type=volume,source=stirling-pdf.volume,volume-subpath=customFiles,target=/customFiles

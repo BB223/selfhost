@@ -1,1 +1,8 @@
 [Volume]
+
+[Service]
+ExecStartPost=/usr/bin/mkdir -p %D/containers/storage/volumes/systemd-stirling-pdf/_data/trainingData
+ExecStartPost=/usr/bin/mkdir -p %D/containers/storage/volumes/systemd-stirling-pdf/_data/extraConfigs
+ExecStartPost=/usr/bin/mkdir -p %D/containers/storage/volumes/systemd-stirling-pdf/_data/customFiles
+ExecStartPost=/usr/bin/mkdir -p %D/containers/storage/volumes/systemd-stirling-pdf/_data/logs
+ExecStartPost=/usr/bin/mkdir -p %D/containers/storage/volumes/systemd-stirling-pdf/_data/pipeline
