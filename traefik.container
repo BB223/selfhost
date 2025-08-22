@@ -1,0 +1,11 @@
+[Unit]
+Description=Traefik
+
+[Container]
+Exec='--api.insecure=true' '--providers.docker=true'
+Image=docker.io/library/traefik:latest
+AutoUpdate=registry
+PublishPort=8000:80
+PublishPort=8080:8080
+Network=traefik.network
+Volume=%t/podman/podman.sock:/var/run/docker.sock:ro

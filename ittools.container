@@ -1,0 +1,10 @@
+[Unit]
+Description=it-tools
+After=traefik.container
+Wants=traefik.container
+
+[Container]
+Image=docker.io/corentinth/it-tools:latest
+AutoUpdate=registry
+Label=traefik.http.routers.%N.rule=Host(`ittools.localhost`)
+Network=traefik.network

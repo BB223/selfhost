@@ -1,0 +1,10 @@
+[Unit]
+Description=Plants vs Zombies 2 Gardenless
+After=traefik.container
+Wants=traefik.container
+
+[Container]
+Image=docker.io/gaozih/pvzge:latest
+AutoUpdate=registry
+Label=traefik.http.routers.%N.rule=Host(`pvzge.localhost`)
+Network=traefik.network
